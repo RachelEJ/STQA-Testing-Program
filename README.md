@@ -18,10 +18,11 @@ This repository contains 4 Python files for CSE 4283.
 4. Ensure that pytest is installed  
     - Verify using `pytest --version`  
     - If not, follow installation instructions at https://docs.pytest.org/en/6.2.x/getting-started.html  
-5. Download `assignment2.py` and `test_assignment2.py` into a directory
+5. Download all 4 Python files into a directory
 
 ## Execution Instructions
 1. Open your command line window of choice
 2. Navigate to the directory the files are located in
 3. Use `python3 assignment2.py` to execute base BMI Calculation functionality
-4. Use `pytest` to automatically execute tests using pytest
+4. Use `python3 assignment2-boundaryShift.py` to execute base BMI Calculation functionality with the added boundary shift error 
+5. Use `pytest` to automatically execute tests using pytest
