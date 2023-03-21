@@ -37,8 +37,10 @@ def ClassifyBMI(BMI):
         return 2
     elif (BMI >= 25) and (BMI <= 29.9):
         return 3
-    else:
+    elif (BMI >= 30):
         return 4
+    else:
+        return -1
 
 # defines arguments to pass into test_ClassifyBMI
 @pytest.mark.parametrize("BMI, category", [(18.4, 1), (18.5, 2), (23, 2), (24.9, 2), (25, 3), (27, 3), (29.9, 3), (30, 4), (30.1, 4)])
@@ -88,6 +90,8 @@ def main():
     elif (category == 3):
         print("BMI: %.1f\n" % BMI)
         print("Category: Overweight\n")
-    else:
+    elif (categorry == 4):
         print("BMI: %.1f\n" % BMI)
         print("Category: Obese\n")
+    else:
+        print("An error has occurred. Please try again later\n")
