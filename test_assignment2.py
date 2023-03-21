@@ -15,7 +15,7 @@ def CalcBMI(feet, inches, pounds):
     return round(finalBMI, 1)
 
 # defines arguments to pass into test_CalcBMI
-@pytest.mark.parametrize("feet, inches, pounds, finalBMI", [(5, 10, 140, 20.6), (5, 3, 125, 22.7)])
+@pytest.mark.parametrize("feet, inches, pounds, finalBMI", [(5, 10, 250, 36.7), (5, 3, 125, 22.7)])
 
 # tests CalcBMI using arguments from above parametrization
 def test_CalcBMI(feet, inches, pounds, finalBMI):
@@ -48,12 +48,8 @@ def test_ClassifyBMI(BMI, category):
     assert ClassifyBMI(BMI) == category
 
 
-# prompts user input for height and weight measurements
-def GetMeasurements():
+def main():
     print("Enter in your height and weight measurements below...")
-    feet = ""
-    inches = ""
-    weight = ""
     while(True):
         feet = input("Enter feet: ")
         if (not (feet.isnumeric())):
@@ -66,28 +62,21 @@ def GetMeasurements():
             print("Invalid input. Try again.\n")
             continue
 
-        weight = input ("Enter weight (in pounds): ")
-        if (not (weight.isnumeric())):
+        pounds = input ("Enter weight (in pounds): ")
+        if (not (pounds.isnumeric())):
             print("Invalid input. Try again.\n")
             continue
 
-        if ((float(feet) <= 0) or (float(inches) < 0) or (float(weight) <= 0)):
+        if ((float(feet) <= 0) or (float(inches) < 0) or (float(pounds) <= 0)):
             print("Enter in correct measurements this time :)\n")
         else:
             break
     
     feet = float(feet)
     inches = float(inches)
-    weight = float(weight)
-    measurements = (feet, inches, weight)
-    return measurements
+    pounds = float(pounds)
+    measurements = (feet, inches, pounds)
 
-# ADD IN TESTS FOR THIS ONE LATER
-
-# def test_GetMeasurements():
-
-def main():
-    measurements = GetMeasurements()
     BMI = CalcBMI(measurements[0], measurements[1], measurements[2])
     category = ClassifyBMI(BMI)
     if (category == 1):
@@ -102,5 +91,3 @@ def main():
     else:
         print("BMI: %.1f\n" % BMI)
         print("Category: Obese\n")
-
-main()
