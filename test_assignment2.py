@@ -47,3 +47,60 @@ def ClassifyBMI(BMI):
 def test_ClassifyBMI(BMI, category):
     assert ClassifyBMI(BMI) == category
 
+
+# prompts user input for height and weight measurements
+def GetMeasurements():
+    print("Enter in your height and weight measurements below...")
+    feet = ""
+    inches = ""
+    weight = ""
+    while(True):
+        feet = input("Enter feet: ")
+        if (not (feet.isnumeric())):
+            print("Invalid input. Try again.\n")
+            continue
+
+
+        inches = input("Enter inches: ")
+        if (not (inches.isnumeric())):
+            print("Invalid input. Try again.\n")
+            continue
+
+        weight = input ("Enter weight (in pounds): ")
+        if (not (weight.isnumeric())):
+            print("Invalid input. Try again.\n")
+            continue
+
+        if ((float(feet) <= 0) or (float(inches) < 0) or (float(weight) <= 0)):
+            print("Enter in correct measurements this time :)\n")
+        else:
+            break
+    
+    feet = float(feet)
+    inches = float(inches)
+    weight = float(weight)
+    measurements = (feet, inches, weight)
+    return measurements
+
+# ADD IN TESTS FOR THIS ONE LATER
+
+# def test_GetMeasurements():
+
+def main():
+    measurements = GetMeasurements()
+    BMI = CalcBMI(measurements[0], measurements[1], measurements[2])
+    category = ClassifyBMI(BMI)
+    if (category == 1):
+        print("BMI: %.1f\n" % BMI)
+        print("Category: Underweight\n")
+    elif (category == 2):
+        print("BMI: %.1f\n" % BMI)
+        print("Category: Normal weight\n")
+    elif (category == 3):
+        print("BMI: %.1f\n" % BMI)
+        print("Category: Overweight\n")
+    else:
+        print("BMI: %.1f\n" % BMI)
+        print("Category: Obese\n")
+
+main()
