@@ -22,7 +22,7 @@ def CalcBMI(feet, inches, pounds):
 # classifies BMI category
 # uses BMI rounded to 1 decimal place
 def ClassifyBMI(BMI):
-    if (BMI < 18.5):
+    if (BMI > 0) and (BMI < 18.5):
         return 1
     elif (BMI >= 18.5) and (BMI <= 24.9):
         return 2
