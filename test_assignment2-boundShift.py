@@ -31,7 +31,7 @@ def test_CalcBMI(feet, inches, pounds, finalBMI):
 # classifies BMI category
 # uses BMI rounded to 1 decimal place
 def ClassifyBMI(BMI):
-    if (BMI < 18.5):
+    if (BMI > 0) and (BMI < 18.5):
         return 1
     elif (BMI >= 18.6) and (BMI <= 24.9):
         return 2
@@ -43,7 +43,7 @@ def ClassifyBMI(BMI):
         return -1
 
 # defines arguments to pass into test_ClassifyBMI
-@pytest.mark.parametrize("BMI, category", [(18.4, 1), (18.5, 2), (23, 2), (24.9, 2), (25, 3), (27, 3), (29.9, 3), (30, 4), (30.1, 4)])
+@pytest.mark.parametrize("BMI, category", [(0, -1), (0.1, 1), (9, 1), (18.4, 1), (18.5, 2), (23, 2), (24.9, 2), (25, 3), (27, 3), (29.9, 3), (30, 4)])
 
 # tests ClassifyBMI using arguments from above parametrization
 def test_ClassifyBMI(BMI, category):
