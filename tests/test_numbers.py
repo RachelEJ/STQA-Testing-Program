@@ -1,4 +1,3 @@
-```python
 import math
 import pytest
 import numbers
@@ -25,4 +24,3 @@ def numbers(num1, num2):
 
 def test_numbers(numb1, numb2, quotient):
     assert numbers(numb1, numb2) == quotient
-```
