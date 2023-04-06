@@ -1,6 +1,0 @@
-version: 2.1
-orbs:
-  coveralls: coveralls/coveralls@2.1.0
-  
-
-workflows: null
