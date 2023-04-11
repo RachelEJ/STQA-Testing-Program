@@ -39,10 +39,11 @@ jobs:
       - run:
           name: "Run Tests"
           command: "coverage run --source ./ -m pytest -v tests/; coverage report"
-      - run:
-          name: "Upload Coveralls"
-          command: "coveralls"
-      - coveralls/upload
+#      These will always fail because of a 500 error. Document error and move on
+#      - run:
+#          name: "Upload Coveralls"
+#          command: "coveralls"
+#      - coveralls/upload
 
 
 # Orchestrate jobs using workflows
