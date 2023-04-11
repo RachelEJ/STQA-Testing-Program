@@ -2,7 +2,7 @@
 
 def multiply(a, b):
     return a * b
-    
+
 # test_sample_code.py
 import pytest
 
