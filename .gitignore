@@ -1,5 +1,4 @@
 __pycache__/
 .coverage
-.coveralls.yml
 .pytest_cache/
 venv/
