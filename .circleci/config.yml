@@ -37,8 +37,9 @@ jobs:
           name: "List Pip Packages"
           command: "pip list"
       - run:
-          name: "Run Tests"
+          name: "Run Tests and upload to Coveralls"
           command: "coverage run -m pytest tests/"
+      - coveralls/upload
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
