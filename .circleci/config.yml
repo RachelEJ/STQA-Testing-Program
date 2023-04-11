@@ -38,8 +38,12 @@ jobs:
           command: "pip list"
       - run:
           name: "Run Tests"
-          command: "coverage run --source ./ -m pytest -v tests/"
-      - coveralls/upload
+          command: "coverage run --source ./ -m pytest tests/; coverage report"
+#      These will always fail because of a 500 error. Document error and move on
+#      - run:
+#          name: "Upload Coveralls"
+#          command: "coveralls"
+#      - coveralls/upload
 
 
 # Orchestrate jobs using workflows
