@@ -1,13 +1,14 @@
 # STQA-Testing-Program
 
+
+[![Coverage Status](https://coveralls.io/repos/github/RachelEJ/STQA-Testing-Program/badge.svg?branch=main)](https://coveralls.io/github/RachelEJ/STQA-Testing-Program?branch=main)
+
 ## Description  
 This repository contains 4 Python files for CSE 4283.  
 * `assignment2.py` contains the functions to take in height and weight as user input, calculate the user's BMI, and inform the user of what category their BMI is.  
 * `test_assignment2.py` contains the functions from `assignment2.py` as well as pytest parametrization and assertions to test correct output of the functions.
 * `assignment2-boundShift.py` contains the same code as `assignment2.py` but shifts the lower boundary of the normal category up 0.1
 * `test_assignment2-boundShift.py` contains the functions from `assignment2-boundShift.py` as well as pytest parametrization and assertions to test correct output of the functions.
-
-[![Coverage Status](https://coveralls.io/repos/github/RachelEJ/STQA-Testing-Program/badge.svg?branch=main)](https://coveralls.io/github/RachelEJ/STQA-Testing-Program?branch=main)
 
 ## Setup Instructions  
 1. Open your command line window of choice  
