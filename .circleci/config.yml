@@ -39,7 +39,9 @@ jobs:
       - run:
           name: "Run Tests"
           command: "coverage run --source ./ -m pytest -v tests/"
-      
+      - run:
+          name: "Upload Coveralls"
+          command: "coveralls"
       - coveralls/upload
 
 
