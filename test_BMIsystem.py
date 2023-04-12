@@ -23,17 +23,3 @@ def test_CalcBMI(feet, inches, pounds, finalBMI):
 # tests ClassifyBMI using arguments from above parametrization
 def test_ClassifyBMI(BMI, category):
     assert ClassifyBMI(BMI) == category
-
-# def geninputs1():
-#     inputs = ["5", "4", "100"]
-
-#     for item in inputs:
-#         yield item
-
-# GEN1 = geninputs1()
-
-# def test_main1(monkeypatch, capsys):
-#     monkeypatch.setattr('builtins.input', lambda _: next(GEN1))
-#     main()
-#     captured_stdout, captured_stderr = capsys.readouterr()
-#     assert captured_stdout.strip() == "Enter in your height and weight measurements below...\nBMI: 17.6\nCategory: Underweight"
