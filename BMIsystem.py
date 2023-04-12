@@ -79,4 +79,3 @@ def main():
     else:
         print("An error has occurred. Please try again later\n")
 
-main()

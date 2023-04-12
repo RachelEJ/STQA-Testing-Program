@@ -1,6 +1,6 @@
 import math
 import pytest
-from BMIsystem import CalcBMI
+from BMIsystem import CalcBMI, ClassifyBMI
 
 
 # defines arguments to pass into test_CalcBMI

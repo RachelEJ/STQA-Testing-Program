@@ -1,0 +1,3 @@
+import BMIsystem
+
+BMIsystem.main()
