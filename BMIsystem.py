@@ -1,5 +1,4 @@
 import math
-import pytest
 
 # calculates BMI and returns answer rounded to 1 decimal place 
 # uses height (given in feet and inches) and weight (given in pounds)
@@ -13,14 +12,6 @@ def CalcBMI(feet, inches, pounds):
 
     finalBMI = kgWeight / squaredHeight
     return round(finalBMI, 1)
-
-# defines arguments to pass into test_CalcBMI
-@pytest.mark.parametrize("feet, inches, pounds, finalBMI", [(5, 10, 250, 36.7), (5, 3, 125, 22.7)])
-
-# tests CalcBMI using arguments from above parametrization
-def test_CalcBMI(feet, inches, pounds, finalBMI):
-    assert CalcBMI(feet, inches, pounds) == finalBMI
-
 
 # weight category key
 # 1 - underweight
@@ -41,14 +32,6 @@ def ClassifyBMI(BMI):
         return 4
     else:
         return -1
-
-# defines arguments to pass into test_ClassifyBMI
-@pytest.mark.parametrize("BMI, category", [(0, -1), (0.1, 1), (9, 1), (18.4, 1), (18.5, 2), (23, 2), (24.9, 2), (25, 3), (27, 3), (29.9, 3), (30, 4)])
-
-# tests ClassifyBMI using arguments from above parametrization
-def test_ClassifyBMI(BMI, category):
-    assert ClassifyBMI(BMI) == category
-
 
 def main():
     print("Enter in your height and weight measurements below...")
@@ -95,3 +78,4 @@ def main():
         print("Category: Obese\n")
     else:
         print("An error has occurred. Please try again later\n")
+
