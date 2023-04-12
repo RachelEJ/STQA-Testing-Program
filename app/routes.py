@@ -3,6 +3,7 @@ from flask import Flask, request, render_template_string
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 def index():
 
     if request.method == 'POST':
@@ -23,5 +24,3 @@ def index():
 <p>Result: <input type="number" name="result_dc" value="{{ result }}"></p>
 </form>
 ''', val1=val1, val2=val2, result=result)
-
-app.run()
