@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>BMI System</title>
+    </head>
+    <body>
+        <h1>Thank you for your input!</h1>
+        <div>
+            <hr>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %} 
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %} 
+            {% endwith %} 
+        </div>
+        <form class="form-horizontal">
+            <fieldset disabled>
+                <div class="form-group">
+                    <label class="control-label col-xs-4" for="result"></label>
+                    <div class="col-xs-4">
+                        <input type="text" name="result" class="form-control" placeholder= {{ entry }}>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        
+    </body>
+</html>
