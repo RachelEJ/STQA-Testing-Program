@@ -7,6 +7,7 @@ coveralls==3.3.1
 docopt==0.6.2
 exceptiongroup==1.1.1
 Flask==2.2.3
+Flask-WTF==1.1.1
 idna==3.4
 iniconfig==2.0.0
 itsdangerous==2.1.2
@@ -14,9 +15,12 @@ Jinja2==3.1.2
 MarkupSafe==2.1.2
 packaging==23.0
 pluggy==1.0.0
+pyflakes==3.0.1
 pytest==7.2.2
 PyYAML==6.0
 requests==2.28.2
+requests-unixsocket==0.2.0
 tomli==2.0.1
 urllib3==1.26.15
 Werkzeug==2.2.3
+WTForms==3.0.1
