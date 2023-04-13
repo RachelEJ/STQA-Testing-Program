@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI System</title>
+    </head>
+    <body>
+        <h1>Welcome to the BMI System!</h1>
+        <p>Enter in your height and weight measurements below...</p>
+        <form action="/index" method = "POST">
+            <p>Height in feet: <input type = "number" name = "feetInput" value = "{{ feet }}"/></p>
+            <p>Height in inches: <input type = "number" name = "inchesInput" value = "{{ inches }}"/></p>
+            <p>Weight in pounds: <input type = "number" name = "poundsInput" value = "{{ pounds }}"/></p>
+            <p><input type = "submit" value = "Calculate" /></p>
+            {% if category %}
+            <p>At {{ feet }}' {{ inches }}'' and {{ pounds }} lbs, your BMI is {{ result }}.</p>
+            <p>Your category is {{ category }}</p>
+            {% endif %}
+        </form>
+    </body>
+
+
+</html>
