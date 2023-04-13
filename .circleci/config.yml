@@ -14,6 +14,8 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
       - image: cimg/python:3.11
+        environment:
+          FLASK_CONFIG: TESTING
     # environment:
         # PYENV_ROOT: /home/circleci/.pyenv
         # PATH: /home/circleci/.pyenv/shims:/home/circleci/.pyenv/bin:$PATH
@@ -31,11 +33,13 @@ jobs:
 
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: |
+            echo Hello, World!
 
       - run:
           name: "List Pip Packages"
-          command: "pip list"
+          command: |
+            pip list
 
   run-tests:
     docker:
@@ -57,11 +61,17 @@ jobs:
 
       - run:
           name: "Run Unit Tests"
-          command: "coverage run --source ./ -m pytest flaskFolder/BMI/test_BMIsystem.py; coverage report"
+          command: |
+            coverage run --source ./ -m pytest flaskFolder/BMI/test_BMIsystem.py
+            coverage report
 
       - run:
           name: "Run End-to-End Tests"
-          command: "coverage run --source ./ -m pytest flaskFolder/tests/; coverage report"
+          command: |
+            cd flaskFolder
+            flask run&
+            coverage run --source ./ -m pytest tests/
+            coverage report
 
 #      These will always fail because of a 500 error. Record error and move on
 #      - run:
@@ -73,6 +83,7 @@ jobs:
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  testing-workflow:
     jobs:
       - say-hello
+      - run-tests

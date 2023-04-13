@@ -2,8 +2,6 @@
 
 import pytest
 import requests
-from flask import request
-from flaskFolder.app import app
 
 # E2E test that verifies page is up and running
 @pytest.mark.e2e
