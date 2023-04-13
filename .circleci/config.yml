@@ -60,18 +60,13 @@ jobs:
           pkg-manager: pip
 
       - run:
-          name: "Run Unit Tests"
-          command: |
-            coverage run --source ./ -m pytest flaskFolder/BMI/test_BMIsystem.py
-            coverage report
-
-      - run:
-          name: "Run End-to-End Tests"
+          name: "Run Unit and End-to-End Tests"
           command: |
             cd flaskFolder
             flask run&
             coverage run --source ./ -m pytest tests/
             coverage report
+            
 
 #      These will always fail because of a 500 error. Record error and move on
 #      - run:
