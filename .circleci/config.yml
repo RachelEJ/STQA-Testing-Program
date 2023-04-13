@@ -36,10 +36,34 @@ jobs:
       - run:
           name: "List Pip Packages"
           command: "pip list"
+
+  run-tests:
+    docker:
+      - image: cimg/python:3.11
+    # environment:
+        # PYENV_ROOT: /home/circleci/.pyenv
+        # PATH: /home/circleci/.pyenv/shims:/home/circleci/.pyenv/bin:$PATH
+
+
+    # Add steps to the job
+    # See: https://circleci.com/docs/configuration-reference/#steps
+    steps:
+      - checkout
+      # - run: pyenv install 3.10.2 # Or any other version of Python that you need
+      # - run: pyenv global 3.10.2 # Set the global Python version to the one you just installed
+      # - run: python --version # Verify that the correct Python version is being used
+      - python/install-packages:
+          pkg-manager: pip
+
       - run:
-          name: "Run Tests"
+          name: "Run Unit Tests"
           command: "coverage run --source ./ -m pytest flaskFolder/BMI/test_BMIsystem.py; coverage report"
-#      These will always fail because of a 500 error. Document error and move on
+
+      - run:
+          name: "Run End-to-End Tests"
+          command: "coverage run --source ./ -m pytest flaskFolder/tests/; coverage report"
+
+#      These will always fail because of a 500 error. Record error and move on
 #      - run:
 #          name: "Upload Coveralls"
 #          command: "coveralls"
