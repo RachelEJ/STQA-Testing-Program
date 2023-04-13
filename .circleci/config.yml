@@ -38,7 +38,7 @@ jobs:
           command: "pip list"
       - run:
           name: "Run Tests"
-          command: "coverage run --source ./ -m pytest test_BMIsystem.py; coverage report"
+          command: "coverage run --source ./ -m pytest BMI/test_BMIsystem.py; coverage report"
 #      These will always fail because of a 500 error. Document error and move on
 #      - run:
 #          name: "Upload Coveralls"
