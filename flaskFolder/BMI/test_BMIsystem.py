@@ -1,6 +1,5 @@
 # File containing unit tests for BMIsystem.
 
-import math
 import pytest
 from flaskFolder.BMI.BMIsystem import CalcBMI, ClassifyBMI
 

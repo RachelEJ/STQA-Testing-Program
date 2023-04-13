@@ -1,7 +1,5 @@
 # File containing BMIsystem functions. Does not include main() for modularity purposes. 
 
-import math
-
 # calculates BMI and returns answer rounded to 1 decimal place 
 # uses height (given in feet and inches) and weight (given in pounds)
 def CalcBMI(feet, inches, pounds):
@@ -75,7 +73,7 @@ def main():
     elif (category == 3):
         print("BMI: %.1f\n" % BMI)
         print("Category: Overweight\n")
-    elif (categorry == 4):
+    elif (category == 4):
         print("BMI: %.1f\n" % BMI)
         print("Category: Obese\n")
     else:

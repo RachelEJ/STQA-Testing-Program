@@ -2,15 +2,13 @@
 
 import pytest
 import requests
-from flask import request
-from flaskFolder.app import app
 
 # E2E test that verifies page is up and running
 @pytest.mark.e2e
 def test_page_status(client):
-    requests.post(
-        "http://localhost:5000/"
-    )
+    # requests.post(
+    #     "http://localhost:5000/"
+    # )
     response = requests.get(
         "http://localhost:5000/index"
     )
