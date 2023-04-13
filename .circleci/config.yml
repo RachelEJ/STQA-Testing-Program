@@ -61,7 +61,7 @@ jobs:
 
       - run:
           name: "Run End-to-End Tests"
-          command: "ccoverage run --source ./ -m pytest flaskFolder/tests/; coverage report"
+          command: "coverage run --source ./ -m pytest flaskFolder/tests/; coverage report"
 
 #      These will always fail because of a 500 error. Record error and move on
 #      - run:
