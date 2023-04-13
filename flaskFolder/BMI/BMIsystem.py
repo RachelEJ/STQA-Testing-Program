@@ -76,6 +76,4 @@ def main():
     elif (category == 4):
         print("BMI: %.1f\n" % BMI)
         print("Category: Obese\n")
-    else:
-        print("An error has occurred. Please try again later\n")
 

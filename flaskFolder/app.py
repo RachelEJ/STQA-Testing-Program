@@ -30,8 +30,6 @@ def index():
             category = "overweight"
         elif (categoryNum == 4):
             category = "obese"
-        else:
-            category = "ERROR"
 
         # renders page using template and data from above
         return render_template('index.html', feet=feet, inches=inches, pounds=pounds, result=result, category=category)
