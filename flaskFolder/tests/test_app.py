@@ -1,6 +1,5 @@
 import pytest
 import requests
-import json
 from flask import request
 from flaskFolder.app import app
 
