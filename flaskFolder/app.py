@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from BMI.BMIsystem import CalcBMI, ClassifyBMI
+from flaskFolder.BMI.BMIsystem import CalcBMI, ClassifyBMI
 
 app = Flask(__name__)
 
