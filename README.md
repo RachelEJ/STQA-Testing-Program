@@ -1,6 +1,5 @@
 # STQA-Testing-Program
 
-
 [![Coverage Status](https://coveralls.io/repos/github/RachelEJ/STQA-Testing-Program/badge.svg?branch=main)](https://coveralls.io/github/RachelEJ/STQA-Testing-Program?branch=main)
 
 ## Description  
