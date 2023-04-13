@@ -1,3 +1,5 @@
+# File containing BMIsystem functions. Does not include main() for modularity purposes. 
+
 import math
 
 # calculates BMI and returns answer rounded to 1 decimal place 
