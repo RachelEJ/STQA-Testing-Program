@@ -1,16 +1,25 @@
+<!-- Template for Flask webpage. Data is populated by user and post requests -->
+
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- displays small title in web browser tab -->
         <title>BMI System</title>
     </head>
     <body>
+
+        <!-- displays welcome message and user instructions -->
         <h1>Welcome to the BMI System!</h1>
         <p>Enter in your height and weight measurements below...</p>
+        
+        <!-- form that takes user input -->
         <form action="/index" method = "POST">
             <p>Height in feet: <input type = "number" name = "feetInput" value = "{{ feet }}"/></p>
             <p>Height in inches: <input type = "number" name = "inchesInput" value = "{{ inches }}"/></p>
             <p>Weight in pounds: <input type = "number" name = "poundsInput" value = "{{ pounds }}"/></p>
             <p><input type = "submit" value = "Calculate" /></p>
+            
+            <!-- only displays if feet, inches, pounds, result, and category have already been received/calculated -->
             {% if category %}
             <p>At {{ feet }}' {{ inches }}'' and {{ pounds }} lbs, your BMI is {{ result }}.</p>
             <p>Your category is {{ category }}</p>
