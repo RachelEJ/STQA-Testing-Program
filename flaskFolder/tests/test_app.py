@@ -22,7 +22,7 @@ def test_page_status(client):
 # E2E test that verifies page displays correct results given specified input
 def test_inputs(client, feetInput, inchesInput, poundsInput, finalBMI, classification):
     
-    # passes in 6, 2, 160 as feetInput, inchesInput, poundsInput
+    # passes in feetInput, inchesInput, poundsInput
     landing = client.post("/index", method="POST", data = { "feetInput" : feetInput, "inchesInput" : inchesInput, "poundsInput" : poundsInput })
     html = landing.data.decode()
 
