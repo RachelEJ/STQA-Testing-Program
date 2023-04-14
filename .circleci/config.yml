@@ -67,12 +67,11 @@ jobs:
             coverage run --source ./ -m pytest tests/
             coverage report
             
-
-#      These will always fail because of a 500 error. Record error and move on
-#      - run:
-#          name: "Upload Coveralls"
-#          command: "coveralls"
-#      - coveralls/upload
+            
+      - run:
+          name: "Upload Coveralls"
+          command: "coveralls"
+      - coveralls/upload
 
 
 # Orchestrate jobs using workflows
