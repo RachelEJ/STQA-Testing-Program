@@ -9,16 +9,16 @@ This repository contains several files and directories. A summary of the importa
 `.circleci` - directory that contains config.yml  
 `config.yml` - file that defines the jobs and workflow to run in CircleCI following every commit  
 `flaskFolder` - directory that contains the application files  
-    `app.py` - file that contains the Flask webpage setup  
-    `BMI` - directory that contains the BMIsystem files  
-        `BMIsystem.py` - file that contains the CalcBMI() and ClassifyBMI() functions  
-        `run_BMIsystem.py` - file that contains the main() function to run the BMIsystem in the command line only  
-    `templates` - directory that contains index.html
-        `index.html` - file that contains the base HTML template for the Flask webpage
-    `tests` - directory that contains the testing files
-        `conftest.py` - file that defines the client fixture for testing Flask webpage
-        `test_BMIsystem.py` - file that contains the test functions for CalcBMI() and ClassifyBMI()
-        `test_app.py` - file that contains the test functins for the Flask webpage
+    - `app.py` - file that contains the Flask webpage setup  
+    - `BMI` - directory that contains the BMIsystem files  
+        - `BMIsystem.py` - file that contains the CalcBMI() and ClassifyBMI() functions  
+        - `run_BMIsystem.py` - file that contains the main() function to run the BMIsystem in the command line only  
+    - `templates` - directory that contains index.html
+        - `index.html` - file that contains the base HTML template for the Flask webpage
+    - `tests` - directory that contains the testing files
+        - `conftest.py` - file that defines the client fixture for testing Flask webpage
+        - `test_BMIsystem.py` - file that contains the test functions for CalcBMI() and ClassifyBMI()
+        - `test_app.py` - file that contains the test functins for the Flask webpage
 
 
 ## Setup Instructions  
