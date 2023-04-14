@@ -19,7 +19,8 @@ def test_CalcBMI(feet, inches, pounds, finalBMI):
 # 4 - obese
 
 # defines arguments to pass into test_ClassifyBMI
-@pytest.mark.parametrize("BMI, category", [(0, -1), (0.1, 1), (9, 1), (18.4, 1), (18.5, 2), (23, 2), (24.9, 2), (25, 3), (27, 3), (29.9, 3), (30, 4)])
+@pytest.mark.parametrize("BMI, category", [(0, -1), (0.1, 1), (9, 1), (18.4, 1), 
+    (18.5, 2), (23, 2), (24.9, 2), (25, 3), (27, 3), (29.9, 3), (30, 4)])
 
 # tests ClassifyBMI using arguments from above parametrization
 def test_ClassifyBMI(BMI, category):
