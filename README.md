@@ -3,11 +3,23 @@
 [![Coverage Status](https://coveralls.io/repos/github/RachelEJ/STQA-Testing-Program/badge.svg?branch=main)](https://coveralls.io/github/RachelEJ/STQA-Testing-Program?branch=main)
 
 ## Description  
-This repository contains 4 Python files for CSE 4283.  
-* `assignment2.py` contains the functions to take in height and weight as user input, calculate the user's BMI, and inform the user of what category their BMI is.  
-* `test_assignment2.py` contains the functions from `assignment2.py` as well as pytest parametrization and assertions to test correct output of the functions.
-* `assignment2-boundShift.py` contains the same code as `assignment2.py` but shifts the lower boundary of the normal category up 0.1
-* `test_assignment2-boundShift.py` contains the functions from `assignment2-boundShift.py` as well as pytest parametrization and assertions to test correct output of the functions.
+This repository contains several files and directories. A summary of the important ones are:  
+`.coveralls.yml` - file that specifies repo token for Coveralls reports  
+`requirements.txt` - file that specifies all pip packages required for proper setup and execution  
+`.circleci` - directory that contains config.yml  
+`config.yml` - file that defines the jobs and workflow to run in CircleCI following every commit  
+`flaskFolder` - directory that contains the application files  
+    `app.py` - file that contains the Flask webpage setup  
+    `BMI` - directory that contains the BMIsystem files  
+        `BMIsystem.py` - file that contains the CalcBMI() and ClassifyBMI() functions  
+        `run_BMIsystem.py` - file that contains the main() function to run the BMIsystem in the command line only  
+    `templates` - directory that contains index.html
+        `index.html` - file that contains the base HTML template for the Flask webpage
+    `tests` - directory that contains the testing files
+        `conftest.py` - file that defines the client fixture for testing Flask webpage
+        `test_BMIsystem.py` - file that contains the test functions for CalcBMI() and ClassifyBMI()
+        `test_app.py` - file that contains the test functins for the Flask webpage
+
 
 ## Setup Instructions  
 1. Open your command line window of choice  
