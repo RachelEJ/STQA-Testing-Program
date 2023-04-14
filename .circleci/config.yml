@@ -66,11 +66,6 @@ jobs:
             flask run&
             coverage run --source ./ -m pytest tests/
             coverage report
-            
-            
-      - run:
-          name: "Upload Coveralls"
-          command: "coveralls"
       - coveralls/upload
 
 
